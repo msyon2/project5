@@ -1,0 +1,123 @@
+.movie_intro {
+  width: 100%;
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+  box-shadow: 0 5px 40px rgba(0, 0, 0, 0.5);
+}
+.movie_intro img.bg {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.movie_intro .poster_box {
+  width: 100%;
+  top: 0;
+  height: 90vh;
+  overflow: hidden;
+  /* box-shadow: 0 5px 15px rgba(0, 0, 0, 0.85); */
+}
+.movie_intro img.poster {
+  width: 100%;
+  left: 0;
+  top: -50%;
+  /* height: 100vh; */
+  /* right: 10%; */
+  z-index: 1;
+  box-shadow: 0px 0px 10px 20px black inset;
+}
+/* .movie_intro img.poster.blur {
+  width: 40vw;
+
+  right: 10%;
+  filter: blur(20px);
+  opacity: 0.75;
+} */
+.movie_intro div.overlay,
+.movie_intro div.blur {
+  width: 120vw;
+  height: 100%;
+  top: 0;
+  left: -1rem;
+  z-index: 10;
+  background: -moz-linear-gradient(
+    top,
+    rgba(0, 0, 0, 0.2) 0%,
+    rgba(0, 0, 0, 0.85) 100%
+  );
+  background: -webkit-linear-gradient(
+    top,
+    rgba(0, 0, 0, 0.2) 0%,
+    rgba(0, 0, 0, 0.85) 100%
+  );
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.2) 0%,
+    rgba(0, 0, 0, 0.85) 100%
+  );
+  /*  background-color: black; */
+  filter: blur(10px);
+  background-blend-mode: multiply;
+}
+.movie_intro div.blur {
+  top: auto;
+  background: black;
+  filter: blur(30px);
+}
+.movie_intro div.blur.top {
+  top: -3rem;
+  height: 8rem;
+  filter: blur(40px);
+}
+
+/* movieinfo card */
+.movie_content {
+  position: absolute;
+  width: 750px;
+  color: #f6f6f6;
+  /* background: #f6f6f6; */
+  padding: 4rem 6rem;
+  top: 10%;
+  z-index: 10;
+  /* width: 40vw; */
+  left: 0;
+  /* filter: drop-shadow(0 0 4px rgba(0, 0, 0, 0.8)); */
+}
+.movie_intro .blur.content { 
+  width: 600px;
+  height: 650px;
+  top: 0;
+  background: black;
+  filter: blur(100px);
+  opacity: .5;
+  z-index: 5;
+}
+.movie_content .title_wrap {
+  justify-content: space-between;
+  margin-bottom: 3rem;
+}
+.movie_content h3,
+.movie_content h5 {
+  font-size: 2rem;
+  text-transform: uppercase;
+}
+.movie_content .content_wrap {
+  color: #cacaca;
+}
+.movie_content .content_wrap span {
+  display: block;
+  margin-bottom: 0.5rem;
+}
+.movie_content .content_wrap ul {
+  margin-bottom: 2rem;
+}
+.movie_content .content_wrap li {
+  margin-right: 10px;
+}
+.movie_content .content_wrap p {
+  color: #f6f6f6;
+  font-size: 1.2rem;
+  line-height: 1.7;
+}
