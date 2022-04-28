@@ -1,51 +1,51 @@
-@charset "UTF-8";
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600&display=swap');
-/* font-family: 'Inter', sans-serif; */
-
-* { 
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 body {
-	font-family: 'Inter', sans-serif;
-	background: rgb(209, 209, 209);
-/* 	background: -moz-linear-gradient(
+  font-family: "Poppins", sans-serif;
+  font-size: 300;
+  color: #696f7b;
+  /* color: rgba(51, 51, 51, 0.302); */
+  background: -moz-linear-gradient(
     top,
+    rgba(0, 0, 0, 0.85) 0%,
     rgba(0, 0, 0, 0.6) 50%,
     rgba(0, 0, 0, 0.85) 100%
   );
   background: -webkit-linear-gradient(
     top,
+    rgba(0, 0, 0, 0.85) 0%,
     rgba(0, 0, 0, 0.6) 50%,
     rgba(0, 0, 0, 0.85) 100%
   );
   background: linear-gradient(
-    to bottom,
-    rgba(0, 0, 0, 0.6) 0%,
-    rgba(0, 0, 0, 0.85) 100%
-  ); */
+      to bottom,
+      rgba(0, 0, 0, 0.85) 0%,
+      rgba(0, 0, 0, 0.6) 50%,
+      rgba(0, 0, 0, 0.85) 100%
+    ),
+    rgb(99, 99, 99);
+  background-blend-mode: multiply;
 }
-ol, ul, li {
-	list-style: none;
+ol,
+ul,
+li {
+  list-style: none;
 }
-/* .container {
-	width: 1280px;
-} */
-
 .pr {
-	position: relative;
+  position: relative;
 }
 .pa {
-	position: absolute;
+  position: absolute;
 }
 .pf {
-	position: fixed;
+  position: fixed;
 }
 .flex {
-	display: flex;
+  display: flex;
 }
 .rating {
-	color: #EF5959;
-	/* color: #fd6b6b; */
+  color: #ef5959;
 }

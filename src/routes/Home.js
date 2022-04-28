@@ -43,8 +43,7 @@ class Home extends React.Component {
             <MovieTop movie={this.state.selectMovie}></MovieTop>
             <div className="movies">
               {movies.map((movie) => {
-                return (
-            
+                return (            
                     <Movie
                       key={movie.id}
                       id={movie.id}
@@ -52,7 +51,7 @@ class Home extends React.Component {
                       title={movie.title}
                       summary={movie.summary}
                       poster={movie.medium_cover_image}
-                      largePoster={movie.arge_cover_image}
+                      largePoster={movie.large_cover_image}
                       genres={movie.genres}
                       rating={movie.rating}
                       background={movie.background_image_original}

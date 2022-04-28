@@ -4,14 +4,14 @@ import {Link} from 'react-router-dom';
 
 import './Movie.css'
 
-function Movie({ title , year, summary , poster , genres , rating, background }) {
+function Movie({ title , year, summary , poster , genres , rating,  background }) {
 	return (
 		<div className='movie'>
 			<div className='movie_card pr'>
 				<Link to={{pathname:"/detail", state:{year,title,summary,poster,background,rating,genres} }}>
 					<img src={poster} alt={title} title={title} />
 					<div className='movie_label pa'>
-						<span className='movie_title'>{title}</span><br />
+						{/* <span className='movie_title'>{title}</span><br /> */}
 						<div className='movie_info flex'>
 							<span className='movie_year'>{year}</span>
 							<span className='rating '>{rating}</span>
@@ -31,7 +31,6 @@ Movie.propTypes = {
 	largePoster:PropTypes.string.isRequired,
 	genres:PropTypes.arrayOf(PropTypes.string).isRequired, 
 	rating:PropTypes.number.isRequired, 
-	runtime:PropTypes.number.isRequired, 
 	background:PropTypes.string.isRequired
 };
 
