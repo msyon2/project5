@@ -7,9 +7,11 @@ import './Nav.css'
 function Nav() {
 	return (
 		<div className='nav'>
-			<Link to='/' >Home<FontAwesomeIcon icon={ faHouse}/>
-			</Link>
-			<FontAwesomeIcon icon={ faHouse}/>
+			<div className='home'>
+				<Link to='/' >
+				</Link><FontAwesomeIcon icon={faHouse}/>
+			</div>
+			
 			{/* <Link to='/FAQ'>FAQ</Link> */}
 		</div>
 	)

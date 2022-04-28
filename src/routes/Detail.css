@@ -29,7 +29,7 @@
   margin-bottom: 2rem;
 }
 .detail .movie_info h2 {
-  width: 80%;
+  width: 100%;
 }
 .detail .movie_info h2,
 .detail .movie_info h3 {
@@ -38,19 +38,27 @@
   line-height: 1.5;
   font-weight: 600;
 }
+.detail .movie_info h3 {
+  text-align: right;
+}
 .detail .movie_info h3,
 .detail .movie_info p {
   font-family: "Inter", sans-serif;
 
 }
-
+.detail .movie_info .movie_details {
+  justify-content: space-between;
+  top: 150px;
+}
 .detail .movie_info .movie_genre {
 	margin-bottom: 2rem;
+  padding-left: 0;
 }
 .detail .movie_info .movie_genre li {
 	margin-right: 1rem;
-	font-weight: 200;
+	font-weight: 300;
 	color: #62626b;
+  line-height: 3rem;
 }
 .detail .movie_info p {
 	line-height: 1.7;

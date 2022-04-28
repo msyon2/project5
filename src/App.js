@@ -1,6 +1,7 @@
 //import logo from "./logo.svg";
 import React from "react";
 import {HashRouter, Route} from 'react-router-dom';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 import Home from './routes/Home'
 import Detail from './routes/Detail'

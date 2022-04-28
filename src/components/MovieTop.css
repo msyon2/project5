@@ -1,7 +1,7 @@
 .movie_intro {
-  width: 100%;
-  position: relative;
+  width: 100vw;
   height: 100vh;
+  position: relative;
   overflow: hidden;
   box-shadow: 0 5px 40px rgba(0, 0, 0, 0.5);
 }
@@ -20,9 +20,9 @@
   /* box-shadow: 0 5px 15px rgba(0, 0, 0, 0.85); */
 }
 .movie_intro img.poster {
-  width: 100%;
-  left: 0;
-  top: -50%;
+  width: 65%;
+  right: 0;
+  /* top: -50%; */
   /* height: 100vh; */
   /* right: 10%; */
   z-index: 1;
@@ -85,26 +85,28 @@
   /* filter: drop-shadow(0 0 4px rgba(0, 0, 0, 0.8)); */
 }
 .movie_intro .blur.content { 
-  width: 600px;
+  width: 40%;
   height: 650px;
   top: 0;
   background: black;
-  filter: blur(100px);
-  opacity: .5;
+  filter: blur(40px);
+  opacity: 1;
   z-index: 5;
 }
+.movie_intro .container {
+  width: 100%;
+}
 .movie_content .title_wrap {
-  justify-content: space-between;
   margin-bottom: 3rem;
 }
 .movie_content h3,
 .movie_content h5 {
-  font-size: 2rem;
+  font-size: 2.4rem;
   text-transform: uppercase;
-  font-weight: 600;
+  font-weight: 400;
 }
 .movie_content .content_wrap {
-  color: #cacaca;
+  /* color: #cacaca; */
   font-weight: 300;
 }
 .movie_content .content_wrap span {
@@ -112,11 +114,18 @@
   margin-bottom: 0.5rem;
 }
 .movie_content .content_wrap ul {
-  margin-bottom: 2rem;
+  margin-bottom: 6rem;
+  padding-left: 0;
 }
 .movie_content .content_wrap li {
   margin-right: 10px;
-  
+  color: #898989;
+}
+.movie_intro .container .top20 {
+  color: #898989;
+  font-size: 2rem;
+  text-transform: uppercase;
+  font-weight: 200;
 }
 .movie_content .content_wrap p {
   color: #e6e6e6;

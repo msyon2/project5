@@ -23,14 +23,16 @@ const MovieTop = ({ movie }) => {
         <div className="blur top pa"></div>
         <div className="blur content pa"></div>
         <div className="container ">
-          <div className="movie_content pa">
-            <div className="title_wrap flex">
+          <div className="movie_content">
+            <div className="title_wrap">
               <h3>{movie.title}</h3>
               <h5 className="rating">{movie.rating}</h5>
             </div>
             <div className="content_wrap">
-              <span>{movie.year}</span>
+              {/* <span>{movie.year}</span> */}
               <ul className="movie_genre flex">
+                <li>{movie.year}</li>
+                <li>|</li>
                 {movie.genres.map((genre, index) => {
                   return (
                     <li key={index} className="genre">
@@ -39,8 +41,9 @@ const MovieTop = ({ movie }) => {
                   );
                 })}
               </ul>
-              <p>{movie.summary.slice(0, 200)}...</p>
+              {/* <p>{movie.summary.slice(0, 200)}...</p> */}
             </div>
+          <div className="top20">Top 20 Movies to Watch</div>
           </div>
         </div>
       </div>

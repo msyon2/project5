@@ -2,6 +2,7 @@ import React from "react";
 import axios from "axios";
 import Movie from "../components/Movie";
 import MovieTop from "../components/MovieTop";
+import Spinner from 'react-bootstrap/Spinner';
 
 import "./Home.css";
 import "./Common.css";
@@ -33,29 +34,33 @@ class Home extends React.Component {
   render() {
     const { isLoading, movies } = this.state;
     return (
-      <section className="container">
+      <section className="wrap">
         {isLoading ? (
+
           <div className="loader">
-            <span className="loader__text">Loading...</span>
-          </div>
+          <span className="loader__text">Loading...</span>
+        </div>
+
         ) : (
           <div>
             <MovieTop movie={this.state.selectMovie}></MovieTop>
             <div className="movies">
               {movies.map((movie) => {
                 return (            
-                    <Movie
-                      key={movie.id}
-                      id={movie.id}
-                      year={movie.year}
-                      title={movie.title}
-                      summary={movie.summary}
-                      poster={movie.medium_cover_image}
-                      largePoster={movie.large_cover_image}
-                      genres={movie.genres}
-                      rating={movie.rating}
-                      background={movie.background_image_original}
-                    />
+                    <div className="container">
+                      <Movie
+                        key={movie.id}
+                        id={movie.id}
+                        year={movie.year}
+                        title={movie.title}
+                        summary={movie.summary}
+                        poster={movie.medium_cover_image}
+                        largePoster={movie.large_cover_image}
+                        genres={movie.genres}
+                        rating={movie.rating}
+                        background={movie.background_image_original}
+                      />
+                    </div>
             
                 );
               })}

@@ -1,5 +1,5 @@
 import React from "react";
-import './Detail.css'
+import "./Detail.css";
 
 class Detail extends React.Component {
   componentDidMount() {
@@ -15,18 +15,20 @@ class Detail extends React.Component {
     if (location.state) {
       return (
         <div className="detail flex pr">
-          <img className="pa"
+          <img
+            className="pa"
             src={location.state.poster}
             alt={location.state.title}
             title={location.state.title}
           />
           <div className="movie_info pr">
-            <div className="top flex">
+            <div className="top">
               <h2 className="movie_tit">{location.state.title}</h2>
-              <h3 className="movie_rating">{location.state.rating}</h3>
             </div>
-            <div>
+            <p className="movie_summary">{location.state.summary}</p>
+            <div className="movie_details flex pr">
               <ul className="movie_genre flex">
+                <li>{location.state.year}</li>
                 {location.state.genres.map((genre, index) => {
                   return (
                     <li key={index} className="genre">
@@ -35,8 +37,8 @@ class Detail extends React.Component {
                   );
                 })}
               </ul>
+              <h3 className="movie_rating rating">{location.state.rating}</h3>
             </div>
-            <p className="movie_summary">{location.state.summary}</p>
           </div>
         </div>
       );

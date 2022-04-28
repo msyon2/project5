@@ -23,7 +23,7 @@
 .movie .movie_label {
 	width: 100%;
 	bottom: -10px;
-	background: rgba(35, 35, 35, .85);
+	background: rgba(35, 35, 35, 1);
 	/* background-blend-mode: multiply; */
 	padding: 10px 15px;
 }
