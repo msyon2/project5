@@ -1,12 +1,12 @@
 .nav {
   position: fixed;
-  left: 5%;
+  left: 3%;
   width: 50px;
   height: 100px;
   border-radius: 50px;
   background: #898989;
   background: #383838;
-  bottom: 50px;
+  top:50px;
   padding: 10px 0;
   box-shadow: 0 13px 27px -5px rgba(50, 50, 93, 0.25),
     0 8px 16px -8px rgba(0, 0, 0, 0.3), 0 -6px 16px -6px #d7d7d706;
@@ -14,7 +14,6 @@
 }
 .nav .icons {
   text-align: center;
-  /* padding: 10px 0; */
 }
 .nav a {
   display: block;
@@ -22,4 +21,11 @@
 }
 svg:hover {
   fill: #ef5959;
+}
+@media screen and (max-width: 1090px) {
+  .nav {
+    top: initial;
+    bottom: 50px;
+    left: 5%;
+  }
 }
