@@ -1,21 +1,22 @@
 .movie_intro {
-  width: 100vw;
+  width: 100%;
   height: 100vh;
   position: relative;
   overflow: hidden;
   box-shadow: 0 5px 40px rgba(0, 0, 0, 0.5);
 }
 .movie_intro img.bg {
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  /* height: 100vh; */
   position: absolute;
   top: 0;
   left: 0;
+  display: none;
 }
 .movie_intro .poster_box {
   width: 100%;
   top: 0;
-  height: 90vh;
+  height: 100%;
   overflow: hidden;
   /* box-shadow: 0 5px 15px rgba(0, 0, 0, 0.85); */
 }
@@ -28,13 +29,6 @@
   z-index: 1;
   box-shadow: 0px 0px 10px 20px black inset;
 }
-/* .movie_intro img.poster.blur {
-  width: 40vw;
-
-  right: 10%;
-  filter: blur(20px);
-  opacity: 0.75;
-} */
 .movie_intro div.overlay,
 .movie_intro div.blur {
   width: 120vw;
@@ -65,10 +59,15 @@
   background: black;
   filter: blur(30px);
 }
-.movie_intro div.blur.top {
+.movie_intro .blur.top {
   top: -3rem;
   height: 8rem;
   filter: blur(40px);
+}
+.movie_intro .blur.bottom {
+  top: 85%;
+  height: 60vh;
+  filter: blur(15px);
 }
 
 /* movieinfo card */
@@ -78,15 +77,15 @@
   color: #f6f6f6;
   /* background: #f6f6f6; */
   padding: 4rem 6rem;
-  top: 10%;
+  top: 5%;
   z-index: 10;
   /* width: 40vw; */
-  left: 0;
+  left: 2%;
   /* filter: drop-shadow(0 0 4px rgba(0, 0, 0, 0.8)); */
 }
-.movie_intro .blur.content { 
-  width: 40%;
-  height: 650px;
+.movie_intro .blur.content {
+  width: 45vw;
+  height: 100vh;
   top: 0;
   background: black;
   filter: blur(40px);
@@ -126,12 +125,68 @@
   font-size: 2rem;
   text-transform: uppercase;
   font-weight: 200;
+  margin-top: 130px;
 }
 .movie_content .content_wrap p {
   color: #e6e6e6;
   font-size: 1.2rem;
   line-height: 1.7;
-  font-family: 'Inter',sans-serif;
+  font-family: "Inter", sans-serif;
   font-weight: 400;
- 
+}
+
+@media screen and (max-width: 1090px) {
+  .movie_intro .blur.content {
+    width: 200%;
+    background: -moz-linear-gradient(
+      top,
+      rgba(0, 0, 0, 0.5) 0%,
+      rgba(0, 0, 0, 0.85) 100%
+    );
+    background: -webkit-linear-gradient(
+      top,
+      rgba(0, 0, 0, 0.5) 0%,
+      rgba(0, 0, 0, 0.85) 100%
+    );
+    background: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.5) 0%,
+      rgba(0, 0, 0, 0.85) 100%
+    );
+  }
+  .movie_intro .blur.top {
+    width: 200%;
+    top: -2rem;
+    left: -3rem;
+    height: 8rem;
+    filter: blur(20px);
+  }
+  .movie_intro div.blur.bottom {
+    top: 50%;
+    height: 60vh;
+    filter: blur(15px);
+  }
+  .movie_intro img.poster {
+    width: 100%;
+  }
+  .movie_content {
+    width: 100%;
+    top: 0;
+    padding: 4rem 2rem;
+  }
+  .movie_content h3,
+  .movie_content h5 {
+    text-align: center;
+    font-size: 1.8rem;
+    letter-spacing: 1px;
+  }
+  .movie_content .content_wrap ul {
+    justify-content: center;
+  }
+  .movie_intro .container .top20 {
+    text-align: center;
+    margin-top: 190px;
+    font-size: 2rem;
+    color: #62626b;
+  }
 }

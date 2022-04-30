@@ -14,14 +14,14 @@ class Detail extends React.Component {
     console.log(location.state);
     if (location.state) {
       return (
-        <div className="detail flex pr">
+        <div className="detail pr">
           <img
             className="pa"
             src={location.state.poster}
             alt={location.state.title}
             title={location.state.title}
           />
-          <div className="movie_info pr">
+          <div className="movie_info pa">
             <div className="top">
               <h2 className="movie_tit">{location.state.title}</h2>
             </div>

@@ -1,27 +1,25 @@
 .detail {
-  width: 75vw;
-  height: 470px;
-  overflow: hidden;
-  background: #efeeee;
-  margin-top: 10vw;
-  padding: 4rem;
-  left: 50%;
-  transform: translateX(-50%);
-  box-shadow: 0 13px 27px -5px rgba(50, 50, 90, 0.25),
-    0 8px 16px -8px rgba(0, 0, 0, 0.3);
-  z-index: 1;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  grid-template-columns: repeat(2, minmax(400px, 1fr));
+  grid-gap: 100px;
+  width: 900px;
+  height: 450px;
+  margin: 10vw auto;
+  padding-top: 70px;
+  background-color: #efefef;
 }
-
 .detail img {
-  width: 33.33%;
+  max-width: 350px;
+  width: 100%;
   height: 100%;
   top: 0;
   left: 0;
 }
-
 .detail .movie_info {
-  width: 60%;
-  left: 40%;
+  left: 405px;
+  top: 50px;
 }
 .detail .movie_info .top {
   justify-content: space-between;
@@ -40,30 +38,68 @@
 }
 .detail .movie_info h3 {
   text-align: right;
+  margin-left: 1rem;
 }
 .detail .movie_info h3,
 .detail .movie_info p {
   font-family: "Inter", sans-serif;
-
 }
 .detail .movie_info .movie_details {
   justify-content: space-between;
-  top: 150px;
+  top: 195px;
+  width: 450px;
 }
 .detail .movie_info .movie_genre {
-	margin-bottom: 2rem;
+  margin-bottom: 1rem;
   padding-left: 0;
+  flex-wrap: wrap;
 }
 .detail .movie_info .movie_genre li {
-	margin-right: 1rem;
-	font-weight: 300;
-	color: #62626b;
-  line-height: 3rem;
+  margin-right: 1rem;
+  font-weight: 300;
+  color: #62626b;
+  line-height: 1.7rem;
 }
 .detail .movie_info p {
-	line-height: 1.7;
-	color: #7a7b88;
+  line-height: 1.7;
+  color: #7a7b88;
 }
 .nav {
   display: block !important;
+}
+
+@media screen and (max-width: 1090px) {
+  .detail {
+    grid-template-columns: 1fr;
+    width: 350px;
+    /* padding: 175px; */
+    background-color: transparent;
+    /* top: 5vw; */
+  }
+  .detail img {
+    height: auto;
+  }
+  .detail .movie_info {
+    width: 350px;
+    top: 150%;
+    top: 120%;
+    left: 0;
+    padding: 1rem;
+  }
+  .detail .movie_info h2 {
+    font-size: 1.9rem;
+    font-weight: 300;
+    line-height: 1.2;
+  }
+  .detail .movie_info .movie_genre {
+    width: 350px;
+    flex-wrap: wrap;
+  }
+  .detail .movie_info .movie_genre li {
+    line-height: 1.5rem;
+  }
+  .detail .movie_info .movie_details {
+    top: -23px;
+    width: 330px;
+  }
 }

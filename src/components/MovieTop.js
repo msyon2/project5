@@ -10,7 +10,7 @@ const MovieTop = ({ movie }) => {
           src={movie.background_image_original}
           alt={movie.title}
         />
-        {/* <img className='poster blur pa' src={movie.medium_cover_image} alt={movie.title} /> */}
+       {/*  <img className='poster blur pa' src={movie.large_cover_image} alt={movie.title} /> */}
         <div className="poster_box pr">
           <img
             className="poster pa"
@@ -19,7 +19,7 @@ const MovieTop = ({ movie }) => {
           />
         </div>
         <div className="overlay pa"></div>
-        <div className="blur pa"></div>
+        <div className="blur bottom pa"></div>
         <div className="blur top pa"></div>
         <div className="blur content pa"></div>
         <div className="container ">

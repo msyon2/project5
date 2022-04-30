@@ -1,6 +1,6 @@
 .movie {
 	position: relative;	
-	top: -85%;
+	top: -90%;
 	z-index: 100;
 	justify-self: center;
 }
@@ -11,7 +11,6 @@
 	color: #adaeb9;
 	box-shadow: 0 13px 27px -5px rgba(50, 50, 90, .25), 0 8px 16px -8px rgba(0, 0, 0, .3);
    }
-
 .movie .movie_card a {
 	text-decoration: none;
 	color: inherit;
@@ -23,7 +22,7 @@
 .movie .movie_label {
 	width: 100%;
 	bottom: -10px;
-	background: rgba(35, 35, 35, 1);
+	background: #232323;
 	/* background-blend-mode: multiply; */
 	padding: 10px 15px;
 }
@@ -37,4 +36,10 @@
 }
 .movie .movie_label .movie_info {
 	justify-content: space-between;
+}
+@media screen and (max-width: 1090px) {
+	.movie {
+		top: -80%;
+		left: 11%;
+	}
 }
