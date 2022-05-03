@@ -25,7 +25,7 @@ class Detail extends React.Component {
             <div className="top">
               <h2 className="movie_tit">{location.state.title}</h2>
             </div>
-            <p className="movie_summary">{location.state.summary}</p>
+            {/* <p className="movie_summary">{location.state.slice(0,180)}</p> */}
             <div className="movie_details flex pr">
               <ul className="movie_genre flex">
                 <li>{location.state.year}</li>

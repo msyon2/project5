@@ -11,7 +11,6 @@ class Home extends React.Component {
     isLoading: true,
     movies: [],
     selectMovie: null,
-    myPageMovie: null,
   };
   getMovies = async () => {
     const {
@@ -21,16 +20,12 @@ class Home extends React.Component {
     } = await axios.get(
       "https://yts-proxy.now.sh/list_movies.json?sort_by=rating"
     );
-    this.setState({ movies, selectMovie: movies[0], myPageMovie: movies[3], isLoading: false });
+    this.setState({ movies, selectMovie: movies[0], isLoading: false });
   };
 
   onSelectMovie = (movie) => {
     this.setState({ selectMovie: movie });
   };
-
-  onMyPageMovie = (user) => {
-    this.setState({ myMovie: user});
-  }
 
   componentDidMount() {
     this.getMovies();
